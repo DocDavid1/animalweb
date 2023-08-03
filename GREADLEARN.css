@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: grid;
+    border: 2px black;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 10% 30% 30% 30%;
+    grid-template-rows: 10% 25% 25% 25% 15%;
+    grid-template-areas:
+        'header header header header'
+        'sidebar main main main'
+        'sidebar main main main'
+        'sidebar main main main'
+        'footer footer footer footer';
+}
+
+.header {
+    background-color: rgb(0, 129, 129);
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: rgb(38, 29, 45);
+    grid-area: sidebar;
+    opacity: 0.7;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-area: main;
+
+}
+
+
+
+.main div {
+    width: 26%;
+    height: 50%;
+    border-radius: 30%;
+    opacity: 0.7;
+
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+h2 {
+    text-align: center;
+}
+
+.gogo1 {
+    background-image: url(lyone.jpeg);
+
+}
+
+.gogo2 {
+    background-image: url(jiraf.webp);
+}
+
+.gogo3 {
+    background-image: url(WOLF.jpg);
+}
+
+.gogo4 {
+    background-image: url(shark.webp);
+}
+
+.gogo5 {
+    background-image: url(DOG.jpeg);
+}
+
+.gogo6 {
+    background-image: url(caml.webp);
+}
+
+
+.footer {
+    background-color: rgb(39, 33, 33);
+    grid-area: footer;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+h1{text-align: center;}
+@media screen and (max-width: 500px) {
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+
+        grid-template-areas:
+            'header header header header'
+            'main main main main'
+            'main main main main'
+            'main main main main'
+            'footer footer footer footer';
+    }
+
+    .main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    background-color: black;
+    font-size: 25px;
+    height: 100%;
+    text-align: center;
+
+}
+
+.country {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+li{margin-top: 0.5em;
+    
+}
